@@ -1,0 +1,4 @@
+Name: Insert header
+Description: Insert the header at the beginning of R program
+Binding: help_insert_header
+Interactive: false
