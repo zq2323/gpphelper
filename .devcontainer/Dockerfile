@@ -19,5 +19,4 @@ RUN curl -o quarto-linux-amd64.deb -L "https://github.com/quarto-dev/quarto-cli/
 RUN gdebi -n quarto-linux-amd64.deb
 
 # install languageserver
-RUN apt install --assume-yes --no-install-recommends build-essential libcurl4-openssl-dev libssl-dev libxml2-dev r-base
 RUN Rscript -e "install.packages('languageserver')"
