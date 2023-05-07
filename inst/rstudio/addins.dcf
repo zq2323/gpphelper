@@ -2,3 +2,8 @@ Name: Insert header
 Description: Insert the header at the beginning of R program
 Binding: help_insert_header
 Interactive: false
+
+Name: Insert comment
+Description: Insert the comment above the current row
+Binding: help_insert_comment
+Interactive: false
