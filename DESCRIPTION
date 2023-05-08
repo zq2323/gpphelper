@@ -8,7 +8,7 @@ License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Import:
-    purrr,
+    purrr (>= 1.0.1),
     rstudioapi,
     checkmate
 Roxygen: list(markdown = TRUE)
