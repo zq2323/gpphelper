@@ -31,7 +31,7 @@ help_insert_header <- function(.header_config = options()$gpphelper$headerTempla
 
     #retrieve current package dependencies
     pkg <- renv::dependencies(path = rstudioapi::getActiveDocumentContext()$path)$Package
-    pkg_version <- purrr::map(pkg, \(x) packageVersion(x) |> as.character())  |> purrr::flatten_chr()
+    pkg_version <- purrr::map(pkg, function(x){ packageVersion(x) |> as.character())  |> purrr::flatten_chr()})
     import_pkg <- paste0(pkg, " ", pkg_version)
     template_header <- template_header |>
         reformat_row("date", format(Sys.time(), "%Y-%m-%d")) |>
