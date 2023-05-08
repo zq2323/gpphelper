@@ -1,12 +1,15 @@
 Package: gpphelper
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Good programming practice helper
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Qing", "Zou", , "zouq_yaoda@163.com", role = c("aut", "cre"))
+Description: lets Rsutdio user quickly add code header and comments by using Addins
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
+Import:
+    purrr,
+    rstudioapi,
+    checkmate
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
