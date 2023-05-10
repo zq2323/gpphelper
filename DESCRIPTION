@@ -11,6 +11,8 @@ Import:
     purrr (>= 1.0.1),
     rstudioapi,
     checkmate,
-    magrittr
+    magrittr,
+    dplyr,
+    fs
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
