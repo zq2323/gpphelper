@@ -39,6 +39,12 @@ get_opts <- function(author = options()$gpphelper$author,
     return(infos)
 }
 
+#' Save options()$gpphelper to system file
+#'
+#' @param opts options()$gpphelper
+#' @importFrom dplyr filter bind_rows
+#' @importFrom magrittr %>%
+#' @keywords internal
 add_opts <- function(opts = options()$gpphelper){
 
     if(!file.exists(file.path(system.file(package = "gpphelper"), "template/settings.rds"))){
@@ -46,9 +52,9 @@ add_opts <- function(opts = options()$gpphelper){
         saveRDS(old_settings, file.path(system.file(package = "gpphelper"), "template/settings.rds"))
     }
     old_settings <- readRDS(system.file('template/settings.rds', package = "gpphelper"))
-    new_auth <- get_opts(author = options()$gpphelper$author,
-                         header_config = options()$gpphelper$headerTemplate,
-                         comment_config = options()$gpphelper$comment)
+    new_auth <- get_opts(author = opts$author,
+                         header_config = opts$headerTemplate,
+                         comment_config = opts$comment)
 
     auth <- auth_init()
     if(auth %in% old_settings$author){
