@@ -3,7 +3,7 @@ asc <- function(x) { strtoi(charToRaw(x), 16L) }
 chr <- function(n) { rawToChar(as.raw(n)) }
 encrypt <- function(x, key, alphabet = ascii_chars) {
     s <- strsplit(x, "")
-    sapply(s, \(y) {
+    sapply(s, function(y) {
         i <- match(y, alphabet)
         paste(key[i], collapse = "")
     })
