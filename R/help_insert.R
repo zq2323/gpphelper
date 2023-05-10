@@ -1,5 +1,3 @@
-library(magrittr)
-
 #' reformat the line of template by keywords
 #'
 #' @param template the template read from .txt
