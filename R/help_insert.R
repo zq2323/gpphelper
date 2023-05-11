@@ -45,9 +45,9 @@ help_insert_header <- function(opts = options()$gpphelper){
     template_header <- template_header %>%
         reformat_row("author", author) %>%
         reformat_row("program name", fs::path_file(rstudioapi::getActiveDocumentContext()$path)) %>%
-        reformat_row("Compound/Study/Analysis", paste0(c(get0("W_ANALYSIS", envir = .GlobalEnv, ifnotfound = NULL),
-                                                       get0("W_COMPOUND", envir = .GlobalEnv, ifnotfound = NULL),
-                                                       get0("W_STUDY", envir = .GlobalEnv, ifnotfound = NULL)),
+        reformat_row(decodeChar("'y&]y97jM{`9j.MT7rf.xdx"), paste0(c(get0(decodeChar("iWTET1X{J{"), envir = .GlobalEnv, ifnotfound = NULL),
+                                                       get0(decodeChar("iW'V[3V5E@"), envir = .GlobalEnv, ifnotfound = NULL),
+                                                       get0(decodeChar("iW{/5@X"), envir = .GlobalEnv, ifnotfound = NULL)),
                                                        collapse = "/")) %>%
         reformat_row("# Date", format(Sys.time(), "%Y-%m-%d")) %>%
         reformat_row("Software", R.version$version.string) %>%
