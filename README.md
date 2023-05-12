@@ -6,7 +6,7 @@ Create a GPP helper toolkip, inspired by the project [strcode](https://github.co
 
 please install from Github:
 
-`devtools::install_github("davidgohel/officer")`
+`devtools::install_github("zq2323/gpphelper")`
 
 
 ## Usage
