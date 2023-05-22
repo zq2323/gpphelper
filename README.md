@@ -21,7 +21,7 @@ when clicking `insert the header`, the default header template will be added on 
 ```
 #-----------------Header Begin -------------------#
 # Date     : 2023-05-11
-# Author   : E0459245
+# Author   : XXXYYY
 # Software : R version 4.1.1 (2021-08-10)
 # Import   : dplyr 1.1.2
 #            purrr 1.0.1
