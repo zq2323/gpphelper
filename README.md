@@ -11,7 +11,7 @@ please install from Github:
 
 ## Usage
 
-By using the tool Addins and set the custom shortcut in Rstudio, we are able to quickly insert the header text into the current program with the imported pacakge information.
+By using the tool `Addins` and set the custom shortcut in Rstudio, we are able to quickly insert the header text into the current program with the imported pacakage information.
 
 Addins:
 
@@ -38,14 +38,14 @@ if the value of `Author` is not set by `options()$gpphelp$author` or `sys.getenv
 
 ### Customize your template
 
-You can specify the customized header template. the gpphelp read the `options()$gpphelp` to retrieve the configuration.
+You can specify the customized header template. the gpphelper read the `options()$gpphelp` to retrieve the configuration.
 ```r
 op <- list()
 op$author <- "ZQ222"
 op$headerTemplate <- "your local path/headers_cus.txt"
 options(gpphelper = op)
 ```
-then, `gpphelp` will save the `headers_cus` for user `ZQ222`.
+then, `gpphelper` will save the `headers_cus` for user `ZQ222`.
 
 headers_cus.txt:
 ```
