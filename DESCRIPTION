@@ -3,6 +3,7 @@ Title: Good programming practice helper
 Version: 0.0.1
 Authors@R: 
     person("Qing", "Zou", , "zouq_yaoda@163.com", role = c("aut", "cre"))
+    person("Wayne", "Yang", , "yangwenghou123@foxmail.com", role = c("ctb"))
 Description: lets Rsutdio user quickly add code header and comments by using Addins
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
