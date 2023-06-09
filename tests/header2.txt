@@ -1,0 +1,35 @@
+## Program name:
+## Task:
+## Purpose:
+## Author:
+## Date created:
+## Input:
+## Output:
+## Macro used:
+## ParameterN:
+
+## Remarks:
+
+## Revision history :
+## Modified by:
+## Modification Date:
+## Modification:
+
+## import:
+
+entimiceRepositoryRoot <-  "/a01/var/entimice/filesystem/filesysroot"
+setwd(entimiceRepositoryRoot)
+
+if (exists("pgmpath")) {
+  source(file.path(pgmpath, "setup.R"))
+} else if (exists("exec.programName")) {
+  source(file.path(dirname(exec.programPath), "setup.R"))
+} else {
+  cat("running interactively")
+  source(paste(dirname(rstudioapi::getSourceEditorContext()$path), "./setup.R", sep = "/"))
+}
+
+## load package
+library(data.table)
+library(stringr)
+library(haven)

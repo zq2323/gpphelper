@@ -14,7 +14,16 @@ reformat_row <- function(template, row_item, add_item){
     new_row <- paste0(c(origin, rep(paste0("#", strrep(" ", nchar(origin)-1)), length(add_item)-1)), " ", add_item)
     vec_len <- length(template) + length(add_item) - 1
     update_template <- vector(mode = "character",length = vec_len)
-    update_template <- c(template[1:(origin_index-1)], new_row, template[(origin_index + 1):length(template)])
+    # updated, see below # update_template <- c(template[1:(origin_index-1)], new_row, template[(origin_index + 1):length(template)])
+    if (origin_index == 1) {
+      # when origin_index == 1, template[1:(origin_index-1)] should return nothing
+      update_template <- c(new_row, template[(origin_index + 1):length(template)])
+    } else if (origin_index == length(template)) {
+      # when origin_index indicates the last element, template[(origin_index + 1):length(template)] should return nothing
+      update_template <- c(template[1:(origin_index-1)], new_row)
+    } else {
+      update_template <- c(template[1:(origin_index-1)], new_row, template[(origin_index + 1):length(template)])
+    }
 
     return(update_template)
 }
